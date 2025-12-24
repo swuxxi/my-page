@@ -11,43 +11,92 @@
       crossorigin="anonymous"
     />
     <style>
-      .container {
-        max-width: 400px;
-        margin: 100px auto;
-        padding: 20px;
-        border: 1px solid #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      }
-      .button {
-        background-color: #007bff;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
+   body {
+  display: flex;
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center; /* Центрирует по вертикали */
+  min-height: 100vh; /* Высота вьюпорта, чтобы растянуться на весь экран */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.registration-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Максимальная ширина формы */
+  text-align: center; /* Центрирует текст и инпуты внутри формы */
+}
+
+.registration-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left; /* Инпуты будут выровнены по левому краю внутри блока form-group */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Учитывает padding и border в общей ширине */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
     </style>
   </head>
   <body>
-    <div class="container">
+    <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма регистрации</title>
+    <link rel="stylesheet" href="style.css"> <!-- Подключаем CSS файл -->
+</head>
+<body>
+    <div class="registration-form">
         <h2>Регистрация</h2>
-        <form action="/submit" method="post">
-            <div class="input-group">
-                <label for="username"></label>
-                <input type="text" id="username" name="username" placeholder="Введите логин" required>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
             </div>
-            <div class="input-group">
-                <label for="email"></label>
-                <input type="email" id="email" name="email" placeholder="Введите email" required>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
             </div>
-            <div class="input-group">
-                <label for="password"></label>
-                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
             </div>
-            <button class="button" type="submit">Зарегистрироваться</button>
+            <button type="button" onclick="location.href='index.html'">Зарегистрироваться</button>
         </form>
-        
     </div>
+</body>
+</html>
+
   </body>
 </html>
