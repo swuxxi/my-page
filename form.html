@@ -77,24 +77,37 @@ button {
     <link rel="stylesheet" href="style.css"> <!-- Подключаем CSS файл -->
 </head>
 <body>
-    <div class="registration-form">
-        <h2>Регистрация</h2>
-        <form action="#" method="post">
-            <div class="form-group">
-                <label for="username">Имя пользователя:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Пароль:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="button" onclick="location.href='index.html'">Зарегистрироваться</button>
-        </form>
-    </div>
+   <div class="registration-form">
+    <h2>Авторизация</h2>
+    <form action="register.php" method="post">
+        <div class="form-group">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" 
+                   required 
+                   pattern="[A-Za-z0-9]{3,15}" 
+                   title="Имя должно содержать 3–15 латинских букв или цифр">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" 
+                   required 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                   title="Введите корректный email">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" 
+                   required 
+                   minlength="8" 
+                   pattern="(?=.*[0-9])(?=.*[A-Z]).{8,}" 
+                   title="Пароль минимум 8 символов, с цифрой и заглавной буквой">
+        </div>
+
+        <button type="button" onclick="location.href='index.html'">Зарегистрироваться</button>
+    </form>
+</div>
 </body>
 </html>
 
